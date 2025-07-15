@@ -1,32 +1,50 @@
+/* dark blue page background */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
-    background-color: #f0f0f0;
+    background-color: #0b3d91; /* dark blue */
+    color: white;
 }
+
+/* page title */
 h1 {
     font-size: 2.5rem;
     margin-bottom: 30px;
 }
+
+/* bounce animation */
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50%    { transform: translateY(-8px); }
+}
+
+/* transparent white buttons with bounce */
 form button {
     padding: 10px 20px;
     margin: 10px;
     font-size: 1.2rem;
     cursor: pointer;
-    border: none;
+    border: 2px solid white;               /* white border */
     border-radius: 8px;
-    background-color: #007BFF;
-    color: white;
+    background-color: rgba(255,255,255,0.1); /* see‑through white */
+    color: white;                            /* icon+text color */
+    animation: bounce 1.2s infinite;        /* keep jumping */
     transition: background-color 0.3s;
 }
+
+/* button hover */
 form button:hover {
-    background-color: #0056b3;
+    background-color: rgba(255,255,255,0.3); /* stronger white */
 }
+
+/* result box */
 .result {
     margin-top: 30px;
     padding: 20px;
-    background-color: white;
+    background-color: white; /* white bg */
     border: 2px solid #ccc;
     border-radius: 10px;
     display: inline-block;
+    color: #222;            /* dark text */
 }
