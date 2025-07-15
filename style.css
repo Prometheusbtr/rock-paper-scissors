@@ -1,50 +1,55 @@
-/* dark blue page background */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap'); /* rounded font */
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background-color: #0b3d91; /* dark blue */
-    color: white;
+    display: flex;                /* center everything */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;            /* full browser height */
+    margin: 0;
+    font-family: 'Fredoka One', Arial, sans-serif; /* apply font */
+    background-color: #0b3d91;    /* dark blue bg */
+    color: white;                 /* default text color */
 }
 
-/* page title */
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;            /* larger, bolder title */
+    margin-bottom: 20px;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50%     { transform: translateY(-8px); }
+}
+
+form {
+    display: flex;                /* center buttons in a row */
+    gap: 20px;                    /* space between buttons */
     margin-bottom: 30px;
 }
 
-/* bounce animation */
-@keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50%    { transform: translateY(-8px); }
-}
-
-/* transparent white buttons with bounce */
 form button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;            /* bigger text & icons */
+    padding: 15px 30px;           /* larger clickable area */
+    border: 2px solid white;      /* white outline */
+    border-radius: 12px;          /* round corners */
+    background-color: rgba(255,255,255,0.1); /* light transparent */
+    color: white;                 /* icon + text color */
     cursor: pointer;
-    border: 2px solid white;               /* white border */
-    border-radius: 8px;
-    background-color: rgba(255,255,255,0.1); /* see‑through white */
-    color: white;                            /* icon+text color */
-    animation: bounce 1.2s infinite;        /* keep jumping */
+    animation: bounce 1.2s infinite; /* keep jumping */
     transition: background-color 0.3s;
 }
 
-/* button hover */
 form button:hover {
-    background-color: rgba(255,255,255,0.3); /* stronger white */
+    background-color: rgba(255,255,255,0.3); /* stronger on hover */
 }
 
-/* result box */
 .result {
+    text-align: center;           /* center result text */
     margin-top: 30px;
     padding: 20px;
-    background-color: white; /* white bg */
+    background-color: white;      /* white box */
     border: 2px solid #ccc;
     border-radius: 10px;
-    display: inline-block;
-    color: #222;            /* dark text */
+    color: #222;                  /* dark text */
 }
